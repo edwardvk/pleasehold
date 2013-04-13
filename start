@@ -1,0 +1,8 @@
+#!/bin/bash
+export DISPLAY=:0
+export `dbus-launch | grep ADDRESS`
+jackd -d alsa -d hw:M1010LT_1 -r 44100 & 
+sleep 2
+alsa_in -d alsa -d hw:M1010LT -r 44100 -c 10 &
+alsa_out -d alsa -d hw:M1010LT -r 44100 -c 10 &
+cd /var/www/strand/; python dooropener/doya/tools/runscript.py pleasehold.py

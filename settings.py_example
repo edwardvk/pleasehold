@@ -1,0 +1,6 @@
+bulksmsusername = 'XXXX'
+bulksmspassword = 'XXXX'
+bulksmsserver = 'bulksms.2way.co.za'
+bulksmsport = '5567'
+bulksmsurl = '/eapi/submission/send_sms/2/2.0'
+
