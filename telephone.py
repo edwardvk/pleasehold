@@ -113,7 +113,7 @@ class telephone():
 			out = self.number()			
 			if len(out) == 10 and out[0] == '0': 
 				# Connect to database
-				conn = MySQLdb.connect(host="localhost",user="root",passwd="AZXCDxx",db="strand")
+				conn = MySQLdb.connect(host=settings.dbhost,user=settings.dbuser,passwd=settings.dbpass,db=settings.dbname)
 				cursor = conn.cursor()
 				cursor.execute ("SELECT count(*) FROM cellnumber WHERE cellnumber_uid = %s", out)
 				row = cursor.fetchone()
