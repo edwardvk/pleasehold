@@ -15,12 +15,12 @@ class stream:
 			'bbc4': "http://wm-live.bbc.net.uk/wms/bbc_ami/radio4/radio4_bb_live_int_ep1_sl0?BBC-UID=b4adbcdf5ba7eea337440a77610973cee5bd1676f0b0524162a83074f35cc068",
 			'test': 'rtmp://216.246.37.52/fmr',
 			'capetalk': 'mms://46.4.25.237/capetalk-live',
-			'whatsplaying': 'http://pos.nitric.co.za/whatsplaying',
+			'whatsplaying': 'http://commando.nitric.co.za/whatsplaying',
 			'npr': 'http://69.166.45.60/nwpr'
 		}
 		
 		
-		url = streams.get(streamname,"http://pos.nitric.co.za/twohundred/s"+streamname)
+		url = streams.get(streamname,"http://commando.nitric.co.za/twohundred/s"+streamname)
 		print "Starting stream pipeline: "+url
 		self.pipeline = gst.parse_launch('''
 		souphttpsrc location="%s" !

@@ -123,7 +123,7 @@ while(True): # Main Loop
 			if not sock:
 				try: 
 					sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-					sock.connect(('pos.nitric.co.za', 9999))
+					sock.connect(('commando.nitric.co.za', 9999))
 				except:
 					pass
 			outfile.seek(0)

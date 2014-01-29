@@ -335,7 +335,7 @@ class telephone():
 		if self.state == 'ringing':
 			self.addplay(soundfile.buzz, True)
 			#self.addplay(soundfile.telephonering, True)
-			#subprocess.check_call(['/bin/bash','-c','/usr/bin/lynx -source http://pos.nitric.co.za/ring.php > /dev/null &'])
+			#subprocess.check_call(['/bin/bash','-c','/usr/bin/lynx -source http://commando.nitric.co.za/ring.php > /dev/null &'])
 			
 		if self.state == 'comment':
 			self.addplay(soundfile.leavecomment, True)
@@ -350,7 +350,7 @@ class telephone():
 	def ringer(self):
 		"""Blink the ringer if necessary"""
 		if self.id == 7 and self.state == 'ringing' and self.globalringsince < self.gettime()-decimal.Decimal(7): 
-			subprocess.check_call(['/bin/bash','-c','/usr/bin/lynx -source http://pos.nitric.co.za/ring.php > /dev/null &'])
+			subprocess.check_call(['/bin/bash','-c','/usr/bin/lynx -source http://commando.nitric.co.za/ring.php > /dev/null &'])
 			self.globalringsince = self.gettime()
 			
 			
